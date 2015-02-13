@@ -1,1 +1,33 @@
 # Welcome to the Javascript ES6 snippets!
+
+# Generator function
+snippet gfn
+	function* ${1:name}(${2}) {
+		yield ${3};
+	}
+
+# Arrow function
+snippet =>
+	(${1}) => {
+		${2}
+	}
+
+# Class
+snippet class
+	class ${1:name} {
+		constructor (${2:arg}) {
+			${3:// init}
+		}
+		${4}
+	}
+
+# For of loop
+snippet forof
+	for (let ${1:s} of ${2:sequence}) {
+		${3}
+	}
+
+# Import
+snippet im
+	import ${1:foo} from "${2:bar}"
+	
