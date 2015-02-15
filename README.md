@@ -30,9 +30,10 @@ To checkout the source from repository:
 	git clone https://github.com/isRuslan/vim-es6-snippets.git
 
 ## List
-
- - Generator function: `gfn`
- - Arrow function: `=>`
- - Class: `class`
- - For of loop: `forof`
- - Import: `im`
+| Trigger  | Result  |
+| -------: | ------- |
+| `gfn→`   | `function* name (arg) { yield arg; },` |
+| `=>→`    | `(arg) => { ... },` |
+| `class→` | `class name { constructor () { ...} }` |
+| `forof→` | `for (let value of arr) { ... }` |
+| `im→`    | `import lib from 'Library'` |
