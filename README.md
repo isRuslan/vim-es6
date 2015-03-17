@@ -2,7 +2,7 @@
 
 > Write JavaScript ES6 easily with vim snippets.
 
-![](https://raw.githubusercontent.com/isRuslan/vim-es6-snippets/master/promo.gif)
+![](https://raw.githubusercontent.com/isRuslan/vim-es6-snippets/master/es6.gif)
 
 ## Install
 
