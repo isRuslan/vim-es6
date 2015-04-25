@@ -1,6 +1,6 @@
-## vim es6
+## vim es6 :dancer:
 
-> Write JavaScript ES6 easily with vim-es6.
+> Write JavaScript ES6 easily with vim.
 
 ![](https://raw.githubusercontent.com/isRuslan/vim-es6/master/sample.gif)
 
