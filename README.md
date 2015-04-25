@@ -29,7 +29,7 @@ To checkout the source from repository:
 	cd ~/.vim/bundle
 	git clone https://github.com/isRuslan/vim-es6.git
 
-## List
+## Snippets list
 | Trigger  | Result  |
 | -------: | ------- |
 | `gfn→`   | `function* name (arg) { yield arg; },` |
