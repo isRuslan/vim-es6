@@ -1,6 +1,8 @@
-## vim es6 snippets
+## vim es6
 
-> Write JavaScript ES6 easily with vim snippets.
+> Write JavaScript ES6 easily with vim-es6.
+
+![](https://raw.githubusercontent.com/isRuslan/vim-es6/master/sample.gif)
 
 ## Install
 
@@ -9,23 +11,23 @@
 To install using [Vundle](https://github.com/gmarik/vundle):
 
 	" add this line to your .vimrc file
-	Plugin 'isRuslan/vim-es6-snippets'
+	Plugin 'isRuslan/vim-es6'
 
 To install using pathogen.vim:
 
 	cd ~/.vim/bundle
-	git clone https://github.com/isRuslan/vim-es6-snippets.git
+	git clone https://github.com/isRuslan/vim-es6.git
 
-To manual install [download](https://github.com/isRuslan/vim-es6-snippets/releases) zip file:
+To manual install [download](https://github.com/isRuslan/vim-es6/releases) zip file:
 
 	cd ~/.vim
-	unzip vim-es6-snippets.zip
+	unzip vim-es6.zip
 
 
 To checkout the source from repository:
 
 	cd ~/.vim/bundle
-	git clone https://github.com/isRuslan/vim-es6-snippets.git
+	git clone https://github.com/isRuslan/vim-es6.git
 
 ## List
 | Trigger  | Result  |
