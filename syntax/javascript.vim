@@ -1,7 +1,7 @@
 " Vim syntax file
 "      Language: JavaScript
 "    Maintainer: Ruslan Ismagilov <https://github.com/isRuslan>
-"       Version: 1.0.1
+"       Version: 1.0.2
 "       Credits: Kao Wei-Ko(othree), Zhao Yi, Claudio Fleiner, Scott Shattuck 
 "                (This file is based on their hard work)
 
