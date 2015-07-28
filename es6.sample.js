@@ -8,6 +8,10 @@ export default class SkinnedMesh extends THREE.Mesh {
   }
   update(camera) {
     //...
+    let $camera = camera;
+    const $top = camera.top;
+    const $parent = camera.parent;
+
     super.update();
   }
   static defaultMatrix() {
@@ -16,7 +20,8 @@ export default class SkinnedMesh extends THREE.Mesh {
 }
 
 nums.forEach(v => {
-  if (v % 5 === 0)
+  if (v % 5.1 === 0)
     fives.push(v);
 });
+
 
