@@ -31,8 +31,8 @@ syntax keyword javaScriptIdentifier     arguments this let const var void yield
 syntax keyword javaScriptOperator       delete new instanceof typeof
 syntax keyword javaScriptBoolean        true false
 syntax keyword javaScriptNull           null undefined
-syntax keyword javaScriptMessage        alert confirm prompt status
-syntax keyword javaScriptDeprecated     escape unescape all applets alinkColor bgColor fgColor linkColor vlinkColor xmlEncoding
+syntax keyword javaScriptMessage        alert confirm prompt
+syntax keyword javaScriptDeprecated     escape unescape applets alinkColor bgColor fgColor linkColor vlinkColor xmlEncoding
 syntax keyword javaScriptConditional    if else switch
 syntax keyword javaScriptRepeat         do while for in
 syntax keyword javaScriptBranch         break continue
