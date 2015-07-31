@@ -9,8 +9,9 @@ export default class SkinnedMesh extends THREE.Mesh {
   update(camera) {
     //...
     let $camera = camera;
-    const $top = camera.top;
-    const $parent = camera.parent || camera.all || camera.status;
+    const $top = camera.map(c => c + 1);
+    
+	  function *name (arg) { yield arg; },
 
     super.update();
   }

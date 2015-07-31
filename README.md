@@ -32,7 +32,7 @@ To checkout the source from repository:
 ## Snippets list
 | Trigger  | Result  |
 | -------: | ------- |
-| `gfn→`   | `function* name (arg) { yield arg; },` |
+| `gfn→`   | `function* name (arg) { yield arg; }` |
 | `=>→`    | `(arg) => { ... },` |
 | `class→` | `class name { constructor () { ...} }` |
 | `forof→` | `for (let value of arr) { ... }` |
