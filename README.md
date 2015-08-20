@@ -6,7 +6,7 @@
 
 ## Install
 
-> You need [SnipMate](https://github.com/garbas/vim-snipmate) installed.
+> You need [SnipMate](https://github.com/garbas/vim-snipmate) or [UltiSnips](https://github.com/SirVer/ultisnips) installed.
 
 To install using [Vundle](https://github.com/gmarik/vundle):
 
