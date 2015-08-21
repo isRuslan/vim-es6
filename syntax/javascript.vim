@@ -53,6 +53,8 @@ syntax region  javaScriptComment          start="/\*"  end="\*/" contains=@Spell
 syntax match   javaScriptSpecial          "\\\d\d\d\|\\."
 syntax region  javaScriptString	          start=+"+  skip=+\\\\\|\\"+  end=+"\|$+	contains=javaScriptSpecial,@htmlPreproc
 syntax region  javaScriptString	          start=+'+  skip=+\\\\\|\\'+  end=+'\|$+	contains=javaScriptSpecial,@htmlPreproc
+syntax region  javascriptTemplateInternal  start=/\${/ end=/}/ contains=javaScriptString
+syntax region  javascriptTemplate          start=/`/  skip=/\\\\\|\\`\|\n/  end=/`\|$/ contains=javaScriptSpecial,javascriptTemplateInternal nextgroup=@javascriptComments,@javascriptSymbols 
 syntax match   javaScriptSpecialCharacter "'\\.'"
 syntax match   javaScriptNumber           "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 syntax region  javaScriptRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[gim]\{0,2\}\s*$+ end=+/[gim]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
@@ -63,7 +65,7 @@ syntax match   javascriptDollar           "\$"
 " syntax keyword javaScriptGlobal         self top parent
 
 " Code blocks"
-syntax cluster javaScriptAll       contains=javaScriptComment,javaScriptLineComment,javaScriptDocComment,javaScriptString,javaScriptRegexpString,javaScriptNumber,javaScriptFloat,javascriptDollar,javaScriptLabel,javaScriptSource,javaScriptWebAPI,javaScriptOperator,javaScriptBoolean,javaScriptNull,javaScriptFuncKeyword,javaScriptConditional,javaScriptRepeat,javaScriptBranch,javaScriptStatement,javaScriptGlobalObjects,javaScriptMessage,javaScriptIdentifier,javaScriptExceptions,javaScriptReserved,javaScriptDeprecated,javaScriptDomErrNo,javaScriptDomNodeConsts,javaScriptHtmlEvents,javaScriptDotNotation,javaScriptBrowserObjects,javaScriptDOMObjects,javaScriptAjaxObjects,javaScriptPropietaryObjects,javaScriptDOMMethods,javaScriptHtmlElemProperties,javaScriptDOMProperties,javaScriptEventListenerKeywords,javaScriptEventListenerMethods,javaScriptAjaxProperties,javaScriptAjaxMethods,javaScriptFuncArg
+syntax cluster javaScriptAll       contains=javaScriptComment,javaScriptLineComment,javaScriptDocComment,javaScriptString,javaScriptRegexpString,javascriptTemplate,javaScriptNumber,javaScriptFloat,javascriptDollar,javaScriptLabel,javaScriptSource,javaScriptWebAPI,javaScriptOperator,javaScriptBoolean,javaScriptNull,javaScriptFuncKeyword,javaScriptConditional,javaScriptRepeat,javaScriptBranch,javaScriptStatement,javaScriptGlobalObjects,javaScriptMessage,javaScriptIdentifier,javaScriptExceptions,javaScriptReserved,javaScriptDeprecated,javaScriptDomErrNo,javaScriptDomNodeConsts,javaScriptHtmlEvents,javaScriptDotNotation,javaScriptBrowserObjects,javaScriptDOMObjects,javaScriptAjaxObjects,javaScriptPropietaryObjects,javaScriptDOMMethods,javaScriptHtmlElemProperties,javaScriptDOMProperties,javaScriptEventListenerKeywords,javaScriptEventListenerMethods,javaScriptAjaxProperties,javaScriptAjaxMethods,javaScriptFuncArg
 
 if main_syntax == "javascript"
 	syntax sync clear
@@ -123,6 +125,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
 	HiLink javaScriptDocParam               Function
 
 	HiLink javaScriptString                 String
+  HiLink javascriptTemplateInternal       Label
+  HiLink javascriptTemplate               String
 	HiLink javaScriptRegexpString           String
 
 	HiLink javaScriptNumber                 Number

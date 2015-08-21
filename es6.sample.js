@@ -10,8 +10,11 @@ export default class SkinnedMesh extends THREE.Mesh {
     //...
     let $camera = camera;
     const $top = camera.map(c => c + 1);
-    
-	  function *name (arg) { yield arg; },
+
+    function *name (arg) {
+      console.log(`Got args ${...arg}.`);
+      yield arg;
+    }
 
     super.update();
   }
