@@ -1,4 +1,4 @@
-## vim es6 :dancer:
+![](http://i.imgur.com/lYbyBTe.png)
 
 > Write JavaScript ES6 easily with vim.
 
