@@ -18,6 +18,7 @@ export default class SkinnedMesh extends THREE.Mesh {
 
     super.update();
   }
+
   static defaultMatrix() {
     return new THREE.Matrix4();
   }
