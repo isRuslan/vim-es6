@@ -2,7 +2,7 @@
 
 > Write JavaScript ES6 easily with vim.
 
-![](https://raw.githubusercontent.com/isRuslan/vim-es6/master/sample.gif)
+![](https://giant.gfycat.com/FluidFrailAmethystgemclam.gif)
 
 ## Install
 
