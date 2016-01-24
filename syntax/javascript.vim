@@ -52,6 +52,7 @@ syntax region  javaScriptComment          start="/\*"  end="\*/" contains=@Spell
 " Strings, Numbers and Regex Highlight
 syntax match   javaScriptSpecial           "\\\d\d\d\|\\."
 syntax region  javaScriptString            start=+"+  skip=+\\\\\|\\"+  end=+"\|$+	contains=javaScriptSpecial,@htmlPreproc
+syntax region  javaScriptString            start=+'+  skip=+\\\\\|\\'+  end=+'\|$+	contains=javaScriptSpecial,@htmlPreproc
 syntax region  javascriptTemplate          start=/`/  skip=/\\\\\|\\`\|\n/  end=/`\|$/ contains=javascriptTemplateSubstitution nextgroup=@javascriptComments,@javascriptSymbols skipwhite skipempty
 syntax region  javascriptTemplateSubstitution matchgroup=javascriptTemplateSB contained start=/\${/ end=/}/ contains=@javascriptExpression
 
