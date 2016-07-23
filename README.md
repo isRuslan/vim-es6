@@ -37,3 +37,4 @@ To checkout the source from repository:
 | `class→` | `class name { constructor () { ...} }` |
 | `forof→` | `for (let value of arr) { ... }` |
 | `im→`    | `import lib from 'Library'` |
+| `ex→`    | `export default foo` |
