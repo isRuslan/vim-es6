@@ -27,7 +27,7 @@ hi link shebang Comment
 
 " Statement Keywords
 syntax keyword javaScriptSource         import export
-syntax keyword javaScriptIdentifier     arguments this let const var void yield
+syntax keyword javaScriptIdentifier     arguments this let const var void yield async await
 syntax keyword javaScriptOperator       delete new instanceof typeof
 syntax keyword javaScriptBoolean        true false
 syntax keyword javaScriptNull           null undefined
