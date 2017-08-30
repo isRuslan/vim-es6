@@ -34,7 +34,7 @@ syntax keyword javaScriptNull           null undefined
 syntax keyword javaScriptMessage        alert confirm prompt
 syntax keyword javaScriptDeprecated     escape unescape applets alinkColor bgColor fgColor linkColor vlinkColor xmlEncoding
 syntax keyword javaScriptConditional    if else switch
-syntax keyword javaScriptRepeat         do while for in
+syntax keyword javaScriptRepeat         do while for in of
 syntax keyword javaScriptBranch         break continue
 syntax keyword javaScriptLabel          case default
 syntax keyword javaScriptPrototype      prototype
