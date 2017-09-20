@@ -203,7 +203,7 @@ if exists("did_javascript_hilink")
 	HiLink javaScriptPropietaryObjects      Constant
 
 	delcommand HiLink
-	if exists(did_javascript_syn_inits)
+	if exists("did_javascript_syn_inits")
 		unlet did_javascript_syn_inits
 	endif
 	unlet did_javascript_hilink
