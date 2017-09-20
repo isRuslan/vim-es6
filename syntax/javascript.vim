@@ -104,7 +104,7 @@ if version >= 508 || !exists("did_javascript_syn_inits")
 endif
 
 " include syntax modules
-runtime syntax/modules/*.vim
+runtime! syntax/modules/*.vim
 
 " JavaScriptFold Function
 function! JavaScriptFold()
