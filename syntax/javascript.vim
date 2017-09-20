@@ -89,8 +89,22 @@ syntax match javaScriptOpSymbols    "=\{1,3}\|!==\|!=\|<\|>\|>=\|<=\|++\|+=\|--\
 syntax match javaScriptEndColons    "[;,]"
 syntax match javaScriptLogicSymbols "\(&&\)\|\(||\)"
 
+" The HiLink function is used by submodules, thus needs to be defined before loading them.
+" did_javascript_hilink variable is set to indicate HiLink is available and linking should be done.
+" For version 5.7 and earlier: only when not done already
+" For version 5.8 and later: only when an item doesn't have highlighting yet
+if version >= 508 || !exists("did_javascript_syn_inits")
+	if version < 508
+		let did_javascript_syn_inits = 1
+		command -nargs=+ HiLink hi link <args>
+	else
+		command -nargs=+ HiLink hi def link <args>
+	endif
+	let did_javascript_hilink = 1
+endif
+
 " include syntax modules
-runtime syntax/vim-es6/modules/*.vim
+runtime syntax/modules/*.vim
 
 " JavaScriptFold Function
 function! JavaScriptFold()
@@ -101,15 +115,7 @@ endfunction
 
 " Highlight links
 " Define the default highlighting.
-" For version 5.7 and earlier: only when not done already
-" For version 5.8 and later: only when an item doesn't have highlighting yet
-if version >= 508 || !exists("did_javascript_syn_inits")
-	if version < 508
-		let did_javascript_syn_inits = 1
-		command -nargs=+ HiLink hi link <args>
-	else
-		command -nargs=+ HiLink hi def link <args>
-	endif
+if exists("did_javascript_hilink")
 	HiLink javaScriptEndColons              Operator
 	HiLink javaScriptOpSymbols              Operator
 	HiLink javaScriptLogicSymbols           Boolean
@@ -126,10 +132,10 @@ if version >= 508 || !exists("did_javascript_syn_inits")
 	HiLink javaScriptDocParam               Function
 
 	HiLink javaScriptString                 String
-  HiLink javascriptTemplate               String
-  HiLink javascriptTemplateSubstitution   Label
+	HiLink javascriptTemplate               String
+	HiLink javascriptTemplateSubstitution   Label
 	HiLink javaScriptRegexpString           String
-  HiLink javascriptTemplateSB             javascriptTemplateSubstitution
+	HiLink javascriptTemplateSB             javascriptTemplateSubstitution
 
 	HiLink javaScriptNumber                 Number
 	HiLink javaScriptFloat                  Number
@@ -151,7 +157,7 @@ if version >= 508 || !exists("did_javascript_syn_inits")
 	HiLink javaScriptSource                 Special
 	HiLink javaScriptGlobalObjects          Special
 	HiLink javaScriptExceptions             Special
-  HiLink javascriptDollar                 Special
+	HiLink javascriptDollar                 Special
 
 	HiLink javaScriptDeprecated             Exception
 	HiLink javaScriptError                  Error
@@ -197,6 +203,10 @@ if version >= 508 || !exists("did_javascript_syn_inits")
 	HiLink javaScriptPropietaryObjects      Constant
 
 	delcommand HiLink
+	if exists(did_javascript_syn_inits)
+		unlet did_javascript_syn_inits
+	endif
+	unlet did_javascript_hilink
 endif
 
 " Define the htmlJavaScript for HTML syntax html.vim
