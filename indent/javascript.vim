@@ -15,7 +15,6 @@ setlocal nosmartindent
 
 " Now, set up our indentation expression and keys that trigger it.
 setlocal indentexpr=GetJavascriptIndent()
-setlocal formatexpr=Fixedgq(v:lnum,v:count)
 setlocal indentkeys=0{,0},0),0],0\,,!^F,o,O,e
 
 " Only define the function once.
